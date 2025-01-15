@@ -154,14 +154,15 @@
   color: #eae6d6;
 }
 #es-rc-content.es-rc .es-set__group-item-title {
-  font-family: "Gazpacho-Regular", sans-serif;
-  font-weight: 400;
+  font-family: "Gazpacho-Bold", sans-serif;
+  font-weight: 700;
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 16px;
 }
 #es-rc-content.es-rc .es-set__group-item-description {
-  font-family: "Gazpacho-Regular", sans-serif;
-  font-weight: 400;
+  font-family: "Gazpacho-Bold", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
   margin-bottom: 20px;
 }
 #es-rc-content.es-rc .es-set__group-img {
@@ -221,6 +222,7 @@
   margin: 0;
   padding: 0;
   padding-bottom: 100px;
+  background-color: #eae6d6;
 }
 #es-rc-content.es-rc .es-info__title {
   position: relative;
@@ -289,6 +291,7 @@
 }
 #es-rc-content.es-rc .es-possibilities__title--first {
   margin-top: -30px;
+  padding-left: 20px;
 }
 #es-rc-content.es-rc .es-possibilities__title--second {
   position: absolute;
@@ -341,9 +344,23 @@
 }
 #es-rc-content.es-rc .es-photo__img {
   margin-left: -1%;
+  max-width: 60%;
 }
 #es-rc-content.es-rc .es-photo__img--syrups {
   margin: 0 auto;
+  max-width: 90%;
+}
+#es-rc-content.es-rc .es-triple {
+  position: relative;
+}
+#es-rc-content.es-rc .es-triple__pepper {
+  position: absolute;
+  top: 1%;
+  left: 3%;
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  max-width: 20%;
 }
 #es-rc-content.es-rc .es-triple__title {
   position: relative;
@@ -404,6 +421,7 @@
   font-size: 10px;
   width: 120%;
   text-align: right;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
 }
 #es-rc-content.es-rc .es-triple__desc--first {
   top: 20%;
@@ -449,11 +467,13 @@
   min-width: 250px;
 }
 #es-rc-content.es-rc .es-recipes__day-night-title {
+  max-width: 320px;
   margin-bottom: 20px;
   padding-left: 10px;
   padding-right: 10px;
-  font-family: "HurmeGeometricSans3-Bold", sans-serif;
+  font-family: "Gazpacho-Bold", sans-serif;
   font-weight: 700;
+  font-weight: 500;
   font-size: 18px;
 }
 #es-rc-content.es-rc .es-recipes__day-night-description {
@@ -469,7 +489,13 @@
   margin-bottom: 50px;
 }
 #es-rc-content.es-rc .es-recipes__day-night--second {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+}
+#es-rc-content.es-rc .es-recipes__day-night-text {
+  font-family: "HurmeGeometricSans3-Bold", sans-serif;
+  font-weight: 700;
+  font-weight: 500;
+  font-size: 16px;
 }
 #es-rc-content.es-rc .es-recipes__day-night-label {
   position: absolute;
@@ -482,7 +508,7 @@
 }
 #es-rc-content.es-rc .es-recipes__day-night-label--first {
   color: #ffffff;
-  top: 12%;
+  top: 6%;
   left: 40%;
 }
 #es-rc-content.es-rc .es-recipes__day-night-label--second {
@@ -502,12 +528,12 @@
   margin-bottom: 20px;
   font-family: "Gazpacho-Bold", sans-serif;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 26px;
 }
 #es-rc-content.es-rc .es-recipes__day-night-recipe-content-title--small {
   margin-bottom: 20px;
-  font-family: "HurmeGeometricSans3-Regular", sans-serif;
-  font-weight: 400;
+  font-family: "Gazpacho-Bold", sans-serif;
+  font-weight: 700;
   font-size: 16px;
 }
 #es-rc-content.es-rc .es-recipes__day-night-recipe-content {
@@ -531,15 +557,16 @@
 #es-rc-content.es-rc .es-video__title {
   margin: 0;
   padding: 0;
-  font-size: 30px;
+  font-size: 26px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 #es-rc-content.es-rc .es-video__subtitle {
   margin: 0;
   padding: 0;
-  font-family: "Gazpacho-Regular", sans-serif;
-  font-weight: 400;
+  font-family: "Gazpacho-Bold", sans-serif;
+  font-weight: 700;
+  font-weight: 500;
   text-align: center;
   margin-bottom: 20px;
   font-size: 18px;
@@ -595,12 +622,15 @@
     margin-left: 10%;
   }
   #es-rc-content.es-rc .es-recipes__day-night-label--first {
-    top: 10%;
+    top: 8%;
     left: 44%;
   }
   #es-rc-content.es-rc .es-recipes__day-night-label--second {
-    top: 3%;
+    top: -4%;
     left: 0%;
+  }
+  #es-rc-content.es-rc .es-set__group-img--mobile {
+    max-width: 40%;
   }
   #es-rc-content.es-rc .es-triple__wrapper {
     flex-wrap: nowrap;
@@ -619,6 +649,13 @@
   #es-rc-content.es-rc .es-triple__desc-mobile--third {
     top: 61%;
     left: 16%;
+  }
+  #es-rc-content.es-rc .es-triple__desc--small {
+    max-width: 300px;
+    font-size: 14px;
+    top: 110%;
+    left: -12%;
+    text-shadow: none;
   }
   #es-rc-content.es-rc .es-video {
     margin-top: -50px;
@@ -639,8 +676,75 @@
   #es-rc-content.es-rc .es-video__subtitle-second {
     font-size: 36px;
   }
+  #es-rc-content.es-rc .es-photo__img {
+    max-width: 80%;
+  }
   #es-rc-content.es-rc .es-photo__text {
     font-size: 36px;
+  }
+  #es-rc-content.es-rc .es-set {
+    position: relative;
+  }
+  #es-rc-content.es-rc .es-set::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5%;
+    right: 0;
+    background: url("./static/img/set-pineapple.png") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    max-width: 20%;
+  }
+  #es-rc-content.es-rc .es-set__group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: url("./static/img/set-packshot.png") no-repeat center center;
+    background-size: cover;
+    min-height: 500px;
+  }
+  #es-rc-content.es-rc .es-set__group-item {
+    max-width: 32%;
+  }
+  #es-rc-content.es-rc .es-set__group-item--left {
+    margin-top: 5%;
+    position: relative;
+  }
+  #es-rc-content.es-rc .es-set__group-item--left::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -75%;
+    left: 50%;
+    background: url("./static/img/arrow.png") no-repeat center center;
+    background-size: contain;
+    width: 191px;
+    max-width: 64%;
+    height: 100%;
+  }
+  #es-rc-content.es-rc .es-set__group-item--right {
+    margin-top: -25%;
+    margin-right: -3%;
+    position: relative;
+  }
+  #es-rc-content.es-rc .es-set__group-item--right::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 68%;
+    left: -8%;
+    background: url(./static/img/arrow.png) no-repeat center center;
+    background-size: contain;
+    width: 191px;
+    max-width: 64%;
+    height: 100%;
+    transform: rotateY(180deg) scaleY(-1) rotate(-10deg);
+  }
+  #es-rc-content.es-rc .es-set__group-img--mobile {
+    display: none;
   }
   #es-rc-content.es-rc .es-recipes {
     display: flex;
@@ -648,11 +752,8 @@
   #es-rc-content.es-rc .es-recipes__day-night {
     max-width: 50%;
   }
-  #es-rc-content.es-rc .es-recipes__day-night--second {
-    padding-top: 190px;
-  }
   #es-rc-content.es-rc .es-recipes__day-night-label--second {
-    top: 10%;
+    top: -6%;
     left: 0%;
   }
   #es-rc-content.es-rc .es-recipes__day-night-recipe-content--dark {
@@ -665,7 +766,7 @@
     font-size: 13px;
   }
   #es-rc-content.es-rc .es-recipes__day-night-label--first {
-    top: 16%;
+    top: 11%;
   }
   #es-rc-content.es-rc .es-possibilities {
     margin: 30px 0 0;
@@ -681,6 +782,9 @@
   }
   #es-rc-content.es-rc .es-possibilities__right {
     min-width: 60%;
+    max-width: 500px;
+    margin-left: auto;
+    text-align: right;
   }
   #es-rc-content.es-rc .es-possibilities__content {
     padding: 30px;
@@ -694,6 +798,9 @@
   #es-rc-content.es-rc .es-possibilities__title--second {
     left: 0;
   }
+  #es-rc-content.es-rc .es-triple {
+    margin-top: -50px;
+  }
   #es-rc-content.es-rc .es-info__container {
     display: flex;
     align-items: center;
@@ -704,6 +811,23 @@
   }
   #es-rc-content.es-rc .es-info__right {
     width: 60%;
+  }
+  #es-rc-content.es-rc .es-revolution {
+    margin-top: -250px;
+    padding-top: 150px;
+  }
+  #es-rc-content.es-rc .es-revolution__subtitle {
+    margin: 0 auto;
+    max-width: 80%;
+  }
+  #es-rc-content.es-rc .es-revolution__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 30px;
+  }
+  #es-rc-content.es-rc .es-revolution__left, #es-rc-content.es-rc .es-revolution__right {
+    width: 50%;
   }
 }
 @media screen and (min-width: 700px) {
@@ -791,6 +915,9 @@
     font-size: 42px;
     margin-right: 50px;
   }
+  #es-rc-content.es-rc .es-recipes__day-night-title {
+    font-size: 20px;
+  }
   #es-rc-content.es-rc .es-recipes__day-night-recipe-content--first {
     margin-top: -105px;
   }
@@ -808,7 +935,7 @@
     font-size: 35px;
   }
   #es-rc-content.es-rc .es-recipes__day-night-recipe-content-title--small {
-    font-size: 16px;
+    font-size: 23px;
   }
   #es-rc-content.es-rc .es-recipes__day-night-label {
     font-size: 80px;
@@ -817,11 +944,17 @@
     top: 10%;
   }
   #es-rc-content.es-rc .es-recipes__day-night-label--second {
-    top: -3%;
+    top: -8%;
     left: 0%;
   }
   #es-rc-content.es-rc .es-recipes__day-night-recipe-content {
     font-size: 18px;
+  }
+  #es-rc-content.es-rc .es-set::after {
+    height: 500px;
+  }
+  #es-rc-content.es-rc .es-set__group {
+    min-height: 600px;
   }
 }
 @media screen and (min-width: 825px) {
@@ -831,12 +964,16 @@
   #es-rc-content.es-rc .es-recipes__img--night-mobile {
     display: none;
   }
+  #es-rc-content.es-rc .es-recipes__day-night-text {
+    max-width: 400px;
+    font-size: 19px;
+  }
   #es-rc-content.es-rc .es-recipes__day-night-recipe-content--first {
-    margin-top: -105px;
+    margin-top: -5px;
   }
   #es-rc-content.es-rc .es-recipes__day-night-recipe-content--dark {
     position: absolute;
-    top: 38%;
+    top: 70%;
     left: 0;
     z-index: 1;
     color: #ffffff;
@@ -851,12 +988,16 @@
   #es-rc-content.es-rc .es-kv__title--small {
     font-size: 18px;
   }
+  #es-rc-content.es-rc .es-kv__text {
+    font-size: 21px;
+  }
   #es-rc-content.es-rc .es-kv__img {
-    max-width: 59%;
+    max-width: 100%;
+    width: 67%;
   }
   #es-rc-content.es-rc .es-kv__title-group {
-    left: 10%;
-    top: 8%;
+    left: 7%;
+    top: 6%;
   }
   #es-rc-content.es-rc .es-kv__packshot {
     position: absolute;
@@ -873,13 +1014,13 @@
     z-index: 1;
   }
   #es-rc-content.es-rc .es-possibilities {
-    margin-top: -100px;
+    margin-top: -77px;
   }
   #es-rc-content.es-rc .es-possibilities__title-container {
     top: 43px;
   }
   #es-rc-content.es-rc .es-possibilities__right {
-    margin-top: 100px;
+    margin-top: 25px;
   }
   #es-rc-content.es-rc .es-possibilities__title {
     font-size: 36px;
@@ -890,20 +1031,43 @@
   #es-rc-content.es-rc .es-possibilities__title--second {
     top: 44%;
   }
-  #es-rc-content.es-rc .es-possibilities .es-possibilities__content {
-    margin-top: -50px;
+  #es-rc-content.es-rc .es-possibilities .es-possibilities__description {
+    max-width: 78%;
+    font-size: 21px;
+    padding-left: 12%;
+    line-height: 1.4;
+  }
+  #es-rc-content.es-rc .es-possibilities .es-possibilities__description--centered {
+    margin: 0 auto;
+    max-width: 78%;
+    padding-left: 0;
+  }
+  #es-rc-content.es-rc .es-possibilities .es-possibilities__right {
+    max-width: 500px;
+    margin-left: auto;
+    text-align: right;
+  }
+  #es-rc-content.es-rc .es-possibilities .es-possibilities__text {
+    text-align: right;
+  }
+  #es-rc-content.es-rc .es-possibilities .es-possibilities__description-title {
+    font-size: 21px;
   }
   #es-rc-content.es-rc .es-possibilities .es-possibilities__packshot {
     width: 274px;
     margin-top: -120px;
   }
   #es-rc-content.es-rc .es-possibilities .es-possibilities__text {
+    margin-left: auto;
     font-size: 22px;
     width: 90%;
     line-height: 1.25;
   }
   #es-rc-content.es-rc .es-possibilities__img {
     margin-top: -150px;
+  }
+  #es-rc-content.es-rc .es-info {
+    margin-top: -100px;
   }
   #es-rc-content.es-rc .es-info__title {
     line-height: 1;
@@ -919,21 +1083,22 @@
   }
   #es-rc-content.es-rc .es-video__text {
     font-size: 21px;
-    max-width: 80%;
+    max-width: 74%;
   }
   #es-rc-content.es-rc .es-video__text--second {
     max-width: 75%;
   }
   #es-rc-content.es-rc .es-recipes__day-night-title {
-    font-size: 22px;
+    font-size: 33px;
     margin-bottom: 30px;
   }
   #es-rc-content.es-rc .es-recipes__day-night-description {
     font-size: 22px;
   }
   #es-rc-content.es-rc .es-recipes__day-night-group {
-    max-width: 455px;
-    margin-left: 22%;
+    max-width: 346px;
+    margin-left: 15%;
+    margin-top: -100px;
   }
   #es-rc-content.es-rc .es-recipes__day-night-recipe-content {
     padding-left: 30px;
@@ -945,7 +1110,7 @@
     left: 40%;
   }
   #es-rc-content.es-rc .es-recipes__day-night-label--second {
-    top: -2.1%;
+    top: -6.1%;
     left: 3.4%;
   }
   #es-rc-content.es-rc .es-video__subtitle-second {
@@ -963,22 +1128,73 @@
     height: auto;
   }
   #es-rc-content.es-rc .es-triple {
-    margin-top: -100px;
+    margin-top: -200px;
+  }
+  #es-rc-content.es-rc .es-triple__desc--small {
+    max-width: 350px;
+    font-size: 18px;
+    top: 100%;
+    left: 18%;
   }
   #es-rc-content.es-rc .es-triple__desc-mobile--first, #es-rc-content.es-rc .es-triple__desc-mobile--second, #es-rc-content.es-rc .es-triple__desc-mobile--third {
     font-size: 160px;
   }
   #es-rc-content.es-rc .es-triple__desc-mobile--first {
-    top: 14%;
-    left: 22%;
+    top: 11%;
+    left: 16%;
   }
   #es-rc-content.es-rc .es-triple__desc-mobile--second {
     top: 44%;
     left: 42%;
   }
   #es-rc-content.es-rc .es-triple__desc-mobile--third {
-    top: 64%;
-    left: 13%;
+    top: 62%;
+    left: 11%;
+  }
+  #es-rc-content.es-rc .es-revolution {
+    background: url(./static/img/revolution-bg.png) no-repeat center -90px;
+  }
+  #es-rc-content.es-rc .es-revolution__subtitle {
+    font-size: 21px;
+  }
+  #es-rc-content.es-rc .es-revolution__packshot {
+    max-width: 32%;
+  }
+  #es-rc-content.es-rc .es-revolution__right-description {
+    padding-top: 10%;
+    margin-left: -20%;
+    max-width: 91%;
+    font-size: 21px;
+  }
+  #es-rc-content.es-rc .es-set::after {
+    bottom: 2%;
+    max-width: 21%;
+  }
+  #es-rc-content.es-rc .es-set__group {
+    min-height: 800px;
+  }
+  #es-rc-content.es-rc .es-set__title {
+    font-size: 23px;
+  }
+  #es-rc-content.es-rc .es-set__title--gazpacho {
+    font-size: 46px;
+  }
+  #es-rc-content.es-rc .es-set__subtitle {
+    font-size: 21px;
+  }
+  #es-rc-content.es-rc .es-set__group-item-title {
+    font-size: 20px;
+  }
+  #es-rc-content.es-rc .es-set__group-item-title--right {
+    max-width: 75%;
+    text-align: right;
+  }
+  #es-rc-content.es-rc .es-set__group-item-description {
+    font-size: 16px;
+    max-width: 75%;
+  }
+  #es-rc-content.es-rc .es-set__group-item-description--right {
+    text-align: right;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -990,7 +1206,7 @@
     max-width: 502px;
   }
   #es-rc-content.es-rc .es-kv__title {
-    font-size: 56px;
+    font-size: 60px;
   }
   #es-rc-content.es-rc .es-kv__subtitle {
     font-size: 22px;
@@ -1003,9 +1219,10 @@
     line-height: 1.35;
   }
   #es-rc-content.es-rc .es-title {
-    font-size: 56px;
+    font-size: 50px;
   }
   #es-rc-content.es-rc .es-set__title--gazpacho {
+    margin-bottom: 0;
     font-size: 40px;
   }
   #es-rc-content.es-rc .es-video__subtitle-second {
@@ -1015,7 +1232,7 @@
     font-size: 36px;
   }
   #es-rc-content.es-rc .es-video__subtitle {
-    font-size: 30px;
+    font-size: 33px;
   }
   #es-rc-content.es-rc .es-info__title {
     font-size: 46px;
@@ -1025,14 +1242,15 @@
     margin-right: -27px;
   }
   #es-rc-content.es-rc .es-possibilities__title {
-    font-size: 65px;
+    font-size: 50px;
+    padding-left: 20px;
   }
   #es-rc-content.es-rc .es-possibilities__title--first {
     margin-top: -10px;
   }
   #es-rc-content.es-rc .es-possibilities__title--small {
     max-width: 700px;
-    font-size: 36px;
+    font-size: 43px;
   }
   #es-rc-content.es-rc .es-possibilities__subtitle {
     margin-top: 100px;
@@ -1040,41 +1258,83 @@
     font-size: 45px;
   }
   #es-rc-content.es-rc .es-possibilities__title-container {
-    top: 50px;
+    top: 30px;
+  }
+  #es-rc-content.es-rc .es-recipes__day-night-recipe-content {
+    position: absolute;
+    left: 10%;
   }
   #es-rc-content.es-rc .es-recipes__day-night-recipe-content--dark {
     position: absolute;
-    top: 41%;
+    top: 70%;
+    left: 10%;
     font-size: 24px;
   }
   #es-rc-content.es-rc .es-recipes__day-night-label {
     font-size: 132px;
   }
   #es-rc-content.es-rc .es-recipes__day-night-label--first {
-    top: 7.4%;
+    top: 6.4%;
   }
   #es-rc-content.es-rc .es-recipes__day-night-label--second {
-    top: -2.1%;
+    top: -8.1%;
   }
-  #es-rc-content.es-rc .es-recipes__day-night-recipe-content-title {
-    font-size: 48px;
-  }
-  #es-rc-content.es-rc .es-recipes__day-night-recipe-content-title--small {
-    font-size: 18px;
+  #es-rc-content.es-rc .es-recipes__day-night-text {
+    font-size: 21px;
   }
   #es-rc-content.es-rc .es-triple__desc--small {
     font-size: 20px;
+    top: 111%;
+    left: 30%;
+    text-shadow: none;
   }
   #es-rc-content.es-rc .es-triple__desc-mobile--first, #es-rc-content.es-rc .es-triple__desc-mobile--second, #es-rc-content.es-rc .es-triple__desc-mobile--third {
     font-size: 170px;
   }
+  #es-rc-content.es-rc .es-set__group {
+    padding-top: 0;
+    min-height: 834px;
+  }
+  #es-rc-content.es-rc .es-photo__img {
+    height: 630px;
+  }
+  #es-rc-content.es-rc .es-photo__img--syrups {
+    height: auto;
+  }
 }
 @media screen and (min-width: 1400px) {
   #es-rc-content.es-rc .es-video {
+    padding-top: 50px;
     margin-top: -120px;
   }
+  #es-rc-content.es-rc .es-set::after {
+    max-width: 17%;
+  }
+  #es-rc-content.es-rc .es-set__subtitle {
+    max-width: 75%;
+  }
   #es-rc-content.es-rc .es-set__title {
-    max-width: 72%;
+    max-width: 90%;
+    font-size: 29px;
+  }
+  #es-rc-content.es-rc .es-set__title--gazpacho {
+    font-size: 40px;
+  }
+  #es-rc-content.es-rc .es-set__group-item-title {
+    font-size: 26px;
+  }
+  #es-rc-content.es-rc .es-set__group-item {
+    max-width: 32%;
+  }
+  #es-rc-content.es-rc .es-set__group-item--left {
+    margin-top: 15%;
+    margin-left: 5%;
+  }
+  #es-rc-content.es-rc .es-set__group-item--right {
+    margin-top: -16%;
+  }
+  #es-rc-content.es-rc .es-set__group-item-description {
+    font-size: 22px;
   }
 }
 @keyframes slidedown {

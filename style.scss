@@ -220,13 +220,14 @@ $bg-primary: #e8e2d4;
     }
 
     &__group-item-title {
-      @include text-gazpacho-regular;
+      @include text-gazpacho-bold;
       margin-bottom: 10px;
-      font-size: 18px;
+      font-size: 16px;
     }
 
     &__group-item-description {
-      @include text-gazpacho-regular;
+      @include text-gazpacho-bold;
+      font-size: 14px;
       margin-bottom: 20px;
     }
 
@@ -292,6 +293,7 @@ $bg-primary: #e8e2d4;
     margin: 0;
     padding: 0;
     padding-bottom: 100px;
+    background-color: #eae6d6;
 
     &__title {
       position: relative;
@@ -366,7 +368,7 @@ $bg-primary: #e8e2d4;
 
       &--first {
         margin-top: -30px;
-        // text-align: right;
+        padding-left: 20px;
       }
 
       &--second {
@@ -427,13 +429,24 @@ $bg-primary: #e8e2d4;
 
     &__img {
       margin-left: -1%;
+      max-width: 60%;
       &--syrups {
         margin: 0 auto;
+        max-width: 90%;
       }
     }
   }
 
   .es-triple {
+    position: relative;
+
+    &__pepper {
+      position: absolute;
+      top: 1%;
+      left: 3%;
+      @include img;
+      max-width: 20%;
+    }
     &__title {
       position: relative;
       margin: 0;
@@ -496,6 +509,7 @@ $bg-primary: #e8e2d4;
         font-size: 10px;
         width: 120%;
         text-align: right;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
       }
 
       &--first {
@@ -557,10 +571,12 @@ $bg-primary: #e8e2d4;
 
   .es-recipes {
     &__day-night-title {
+      max-width: 320px;
       margin-bottom: 20px;
       padding-left: 10px;
       padding-right: 10px;
-      @include text-hurme-bold;
+      @include text-gazpacho-bold;
+      font-weight: 500;
       font-size: 18px;
     }
 
@@ -577,8 +593,14 @@ $bg-primary: #e8e2d4;
       margin-bottom: 50px;
 
       &--second {
-        margin-bottom: 100px;
+        margin-bottom: 50px;
       }
+    }
+
+    &__day-night-text {
+      @include text-hurme-bold;
+      font-weight: 500;
+      font-size: 16px;
     }
 
     &__day-night-label {
@@ -591,7 +613,7 @@ $bg-primary: #e8e2d4;
 
       &--first {
         color: $secondary;
-        top: 12%;
+        top: 6%;
         left: 40%;
       }
 
@@ -613,11 +635,11 @@ $bg-primary: #e8e2d4;
     &__day-night-recipe-content-title {
       margin-bottom: 20px;
       @include text-gazpacho-bold;
-      font-size: 30px;
+      font-size: 26px;
 
       &--small {
         margin-bottom: 20px;
-        @include text-hurme-regular;
+        @include text-gazpacho-bold;
         font-size: 16px;
       }
     }
@@ -647,14 +669,15 @@ $bg-primary: #e8e2d4;
     &__title {
       margin: 0;
       padding: 0;
-      font-size: 30px;
+      font-size: 26px;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
     &__subtitle {
       margin: 0;
       padding: 0;
-      @include text-gazpacho-regular;
+      @include text-gazpacho-bold;
+      font-weight: 500;
       text-align: center;
       margin-bottom: 20px;
       font-size: 18px;
@@ -705,14 +728,6 @@ $bg-primary: #e8e2d4;
     }
   }
 
-  @media screen and (min-width: 400px) {
-    .es-possibilities {
-      &__title-container {
-        // top: -45px;
-      }
-    }
-  }
-
   @media screen and (min-width: 500px) {
     .es-recipes {
       &__day-night-recipe-content {
@@ -731,13 +746,21 @@ $bg-primary: #e8e2d4;
 
       &__day-night-label {
         &--first {
-          top: 10%;
+          top: 8%;
           left: 44%;
         }
 
         &--second {
-          top: 3%;
+          top: -4%;
           left: 0%;
+        }
+      }
+    }
+
+    .es-set {
+      &__group-img {
+        &--mobile {
+          max-width: 40%;
         }
       }
     }
@@ -769,6 +792,16 @@ $bg-primary: #e8e2d4;
           left: 16%;
         }
       }
+
+      &__desc {
+        &--small {
+          max-width: 300px;
+          font-size: 14px;
+          top: 110%;
+          left: -12%;
+          text-shadow: none;
+        }
+      }
     }
 
     .es-video {
@@ -784,12 +817,6 @@ $bg-primary: #e8e2d4;
         margin-bottom: 30px;
       }
     }
-
-    .es-possibilities {
-      &__title-container {
-        // top: -25px;
-      }
-    }
   }
 
   @media screen and (min-width: 600px) {
@@ -802,8 +829,86 @@ $bg-primary: #e8e2d4;
     }
 
     .es-photo {
+      &__img {
+        max-width: 80%;
+      }
       &__text {
         font-size: 36px;
+      }
+    }
+
+    .es-set {
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -5%;
+        right: 0;
+        background: url('./static/img/set-pineapple.png') no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 400px;
+        max-width: 20%;
+      }
+
+      &__group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        background: url('./static/img/set-packshot.png') no-repeat center center;
+        background-size: cover;
+        min-height: 500px;
+      }
+
+      &__group-item {
+        max-width: 32%;
+
+        &--left {
+          margin-top: 5%;
+          position: relative;
+
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -75%;
+            left: 50%;
+            background: url('./static/img/arrow.png') no-repeat center center;
+            background-size: contain;
+            width: 191px;
+            max-width: 64%;
+            height: 100%;
+          }
+        }
+
+        &--right {
+          margin-top: -25%;
+          margin-right: -3%;
+          position: relative;
+
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 68%;
+            left: -8%;
+            background: url(./static/img/arrow.png) no-repeat center center;
+            background-size: contain;
+            width: 191px;
+            max-width: 64%;
+            height: 100%;
+            transform: rotateY(180deg) scaleY(-1) rotate(-10deg);
+          }
+        }
+      }
+
+      &__group-img {
+        &--mobile {
+          display: none;
+        }
       }
     }
 
@@ -812,15 +917,11 @@ $bg-primary: #e8e2d4;
 
       &__day-night {
         max-width: 50%;
-
-        &--second {
-          padding-top: 190px;
-        }
       }
 
       &__day-night-label {
         &--second {
-          top: 10%;
+          top: -6%;
           left: 0%;
         }
       }
@@ -840,18 +941,13 @@ $bg-primary: #e8e2d4;
 
       &__day-night-label {
         &--first {
-          top: 16%;
+          top: 11%;
         }
       }
     }
 
     .es-possibilities {
       margin: 30px 0 0;
-      // padding-top: 75px;
-
-      &__title-container {
-        // top: 10px;
-      }
 
       &__title-group {
         max-width: 60%;
@@ -868,13 +964,12 @@ $bg-primary: #e8e2d4;
 
       &__right {
         min-width: 60%;
-        // margin-left: -50px;
+        max-width: 500px;
+        margin-left: auto;
+        text-align: right;
       }
 
       &__content {
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
         padding: 30px;
       }
 
@@ -892,6 +987,10 @@ $bg-primary: #e8e2d4;
       }
     }
 
+    .es-triple {
+      margin-top: -50px;
+    }
+
     .es-info {
       &__container {
         display: flex;
@@ -905,6 +1004,28 @@ $bg-primary: #e8e2d4;
 
       &__right {
         width: 60%;
+      }
+    }
+
+    .es-revolution {
+      margin-top: -250px;
+      padding-top: 150px;
+
+      &__subtitle {
+        margin: 0 auto;
+        max-width: 80%;
+      }
+
+      &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding-bottom: 30px;
+      }
+
+      &__left,
+      &__right {
+        width: 50%;
       }
     }
   }
@@ -1020,6 +1141,10 @@ $bg-primary: #e8e2d4;
     }
 
     .es-recipes {
+      &__day-night-title {
+        font-size: 20px;
+      }
+
       &__day-night-recipe-content {
         &--first {
           margin-top: -105px;
@@ -1042,7 +1167,7 @@ $bg-primary: #e8e2d4;
         font-size: 35px;
 
         &--small {
-          font-size: 16px;
+          font-size: 23px;
         }
       }
 
@@ -1053,13 +1178,23 @@ $bg-primary: #e8e2d4;
           top: 10%;
         }
         &--second {
-          top: -3%;
+          top: -8%;
           left: 0%;
         }
       }
 
       &__day-night-recipe-content {
         font-size: 18px;
+      }
+    }
+
+    .es-set {
+      &::after {
+        height: 500px;
+      }
+
+      &__group {
+        min-height: 600px;
       }
     }
   }
@@ -1077,16 +1212,21 @@ $bg-primary: #e8e2d4;
         }
       }
 
+      &__day-night-text {
+        max-width: 400px;
+        font-size: 19px;
+      }
+
       &__day-night-recipe-content {
         &--first {
-          margin-top: -105px;
+          margin-top: -5px;
         }
       }
 
       &__day-night-recipe-content {
         &--dark {
           position: absolute;
-          top: 38%;
+          top: 70%;
           left: 0;
           z-index: 1;
           color: $secondary;
@@ -1107,13 +1247,17 @@ $bg-primary: #e8e2d4;
         }
       }
 
+      &__text {
+        font-size: 21px;
+      }
       &__img {
-        max-width: 59%;
+        max-width: 100%;
+        width: 67%;
       }
 
       &__title-group {
-        left: 10%;
-        top: 8%;
+        left: 7%;
+        top: 6%;
       }
 
       &__packshot {
@@ -1134,15 +1278,14 @@ $bg-primary: #e8e2d4;
     }
 
     .es-possibilities {
-      margin-top: -100px;
+      margin-top: -77px;
 
       &__title-container {
         top: 43px;
       }
 
       &__right {
-        // margin-left: -180px;
-        margin-top: 100px;
+        margin-top: 25px;
       }
 
       &__title {
@@ -1159,8 +1302,31 @@ $bg-primary: #e8e2d4;
       }
 
       .es-possibilities {
-        &__content {
-          margin-top: -50px;
+        &__description {
+          max-width: 78%;
+          font-size: 21px;
+          padding-left: 12%;
+          line-height: 1.4;
+
+          &--centered {
+            margin: 0 auto;
+            max-width: 78%;
+            padding-left: 0;
+          }
+        }
+
+        &__right {
+          max-width: 500px;
+          margin-left: auto;
+          text-align: right;
+        }
+
+        &__text {
+          text-align: right;
+        }
+
+        &__description-title {
+          font-size: 21px;
         }
 
         &__packshot {
@@ -1169,6 +1335,7 @@ $bg-primary: #e8e2d4;
         }
 
         &__text {
+          margin-left: auto;
           font-size: 22px;
           width: 90%;
           line-height: 1.25;
@@ -1181,6 +1348,8 @@ $bg-primary: #e8e2d4;
     }
 
     .es-info {
+      margin-top: -100px;
+
       &__title {
         line-height: 1;
       }
@@ -1200,7 +1369,7 @@ $bg-primary: #e8e2d4;
     .es-video {
       &__text {
         font-size: 21px;
-        max-width: 80%;
+        max-width: 74%;
 
         &--second {
           max-width: 75%;
@@ -1210,7 +1379,7 @@ $bg-primary: #e8e2d4;
 
     .es-recipes {
       &__day-night-title {
-        font-size: 22px;
+        font-size: 33px;
         margin-bottom: 30px;
       }
 
@@ -1219,8 +1388,9 @@ $bg-primary: #e8e2d4;
       }
 
       &__day-night-group {
-        max-width: 455px;
-        margin-left: 22%;
+        max-width: 346px;
+        margin-left: 15%;
+        margin-top: -100px;
       }
 
       &__day-night-recipe-content {
@@ -1235,7 +1405,7 @@ $bg-primary: #e8e2d4;
           left: 40%;
         }
         &--second {
-          top: -2.1%;
+          top: -6.1%;
           left: 3.4%;
         }
       }
@@ -1252,7 +1422,6 @@ $bg-primary: #e8e2d4;
 
       &__img {
         max-width: 100%;
-        // margin-left: -11%;
         height: 600px;
 
         &--syrups {
@@ -1263,7 +1432,16 @@ $bg-primary: #e8e2d4;
     }
 
     .es-triple {
-      margin-top: -100px;
+      margin-top: -200px;
+
+      &__desc {
+        &--small {
+          max-width: 350px;
+          font-size: 18px;
+          top: 100%;
+          left: 18%;
+        }
+      }
 
       &__desc-mobile {
         &--first,
@@ -1273,8 +1451,8 @@ $bg-primary: #e8e2d4;
         }
 
         &--first {
-          top: 14%;
-          left: 22%;
+          top: 11%;
+          left: 16%;
         }
 
         &--second {
@@ -1283,8 +1461,67 @@ $bg-primary: #e8e2d4;
         }
 
         &--third {
-          top: 64%;
-          left: 13%;
+          top: 62%;
+          left: 11%;
+        }
+      }
+    }
+
+    .es-revolution {
+      background: url(./static/img/revolution-bg.png) no-repeat center -90px;
+
+      &__subtitle {
+        font-size: 21px;
+      }
+
+      &__packshot {
+        max-width: 32%;
+      }
+
+      &__right-description {
+        padding-top: 10%;
+        margin-left: -20%;
+        max-width: 91%;
+        font-size: 21px;
+      }
+    }
+
+    .es-set {
+      &::after {
+        bottom: 2%;
+        max-width: 21%;
+      }
+
+      &__group {
+        min-height: 800px;
+      }
+      &__title {
+        font-size: 23px;
+
+        &--gazpacho {
+          font-size: 46px;
+        }
+      }
+
+      &__subtitle {
+        font-size: 21px;
+      }
+
+      &__group-item-title {
+        font-size: 20px;
+
+        &--right {
+          max-width: 75%;
+          text-align: right;
+        }
+      }
+
+      &__group-item-description {
+        font-size: 16px;
+        max-width: 75%;
+
+        &--right {
+          text-align: right;
         }
       }
     }
@@ -1300,7 +1537,7 @@ $bg-primary: #e8e2d4;
       }
 
       &__title {
-        font-size: 56px;
+        font-size: 60px;
       }
 
       &__subtitle {
@@ -1317,12 +1554,13 @@ $bg-primary: #e8e2d4;
     }
 
     .es-title {
-      font-size: 56px;
+      font-size: 50px;
     }
 
     .es-set {
       &__title {
         &--gazpacho {
+          margin-bottom: 0;
           font-size: 40px;
         }
       }
@@ -1340,7 +1578,7 @@ $bg-primary: #e8e2d4;
 
     .es-video {
       &__subtitle {
-        font-size: 30px;
+        font-size: 33px;
       }
     }
 
@@ -1357,7 +1595,8 @@ $bg-primary: #e8e2d4;
 
     .es-possibilities {
       &__title {
-        font-size: 65px;
+        font-size: 50px;
+        padding-left: 20px;
 
         &--first {
           margin-top: -10px;
@@ -1365,7 +1604,7 @@ $bg-primary: #e8e2d4;
 
         &--small {
           max-width: 700px;
-          font-size: 36px;
+          font-size: 43px;
         }
       }
 
@@ -1376,15 +1615,18 @@ $bg-primary: #e8e2d4;
       }
 
       &__title-container {
-        top: 50px;
+        top: 30px;
       }
     }
 
     .es-recipes {
       &__day-night-recipe-content {
+        position: absolute;
+        left: 10%;
         &--dark {
           position: absolute;
-          top: 41%;
+          top: 70%;
+          left: 10%;
           font-size: 24px;
         }
       }
@@ -1393,19 +1635,15 @@ $bg-primary: #e8e2d4;
         font-size: 132px;
 
         &--first {
-          top: 7.4%;
+          top: 6.4%;
         }
         &--second {
-          top: -2.1%;
+          top: -8.1%;
         }
       }
 
-      &__day-night-recipe-content-title {
-        font-size: 48px;
-
-        &--small {
-          font-size: 18px;
-        }
+      &__day-night-text {
+        font-size: 21px;
       }
     }
 
@@ -1413,6 +1651,9 @@ $bg-primary: #e8e2d4;
       &__desc {
         &--small {
           font-size: 20px;
+          top: 111%;
+          left: 30%;
+          text-shadow: none;
         }
       }
       &__desc-mobile {
@@ -1423,16 +1664,66 @@ $bg-primary: #e8e2d4;
         }
       }
     }
+
+    .es-set {
+      &__group {
+        padding-top: 0;
+        min-height: 834px;
+      }
+    }
+
+    .es-photo {
+      &__img {
+        height: 630px;
+
+        &--syrups {
+          height: auto;
+        }
+      }
+    }
   }
 
   @media screen and (min-width: 1400px) {
     .es-video {
+      padding-top: 50px;
       margin-top: -120px;
     }
 
     .es-set {
+      &::after {
+        max-width: 17%;
+      }
+      &__subtitle {
+        max-width: 75%;
+      }
       &__title {
-        max-width: 72%;
+        max-width: 90%;
+        font-size: 29px;
+
+        &--gazpacho {
+          font-size: 40px;
+        }
+      }
+
+      &__group-item-title {
+        font-size: 26px;
+      }
+
+      &__group-item {
+        max-width: 32%;
+
+        &--left {
+          margin-top: 15%;
+          margin-left: 5%;
+        }
+
+        &--right {
+          margin-top: -16%;
+        }
+      }
+
+      &__group-item-description {
+        font-size: 22px;
       }
     }
   }
